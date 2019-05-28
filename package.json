@@ -8,7 +8,7 @@
     "reset": "npm run erase && npm run flash",
     "reupload": "npm run reset && npm run upload",
     "build": "webpack --mode production",
-    "upload": "npm run build && espruino -p /dev/ttyUSB0 -b 115200 --board boards/ESP8266_4MB.json -e 'save()' build/skygard-iot.js",
+    "upload": "npm run build && espruino -p /dev/ttyUSB0 -b 115200 -e 'save()' build/skygard-iot.js",
     "console": "screen /dev/ttyUSB0 115200"
   },
   "dependencies": {
