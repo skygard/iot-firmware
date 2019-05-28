@@ -4,10 +4,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   target: 'node',
   entry: ['./index.js'],
-  externals: {
-    WebServer: 'WebServer',
-    Wifi: 'Wifi',
-  },
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'skygard-iot.js',
@@ -18,7 +14,17 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  loose: true
+                }
+              ]
+            ]
+          }
         }
       },
       {
