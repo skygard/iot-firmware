@@ -7,5 +7,5 @@ Skygard IoT firmware for ESP8266 devices
 - [ ] OTA updates
 - [ ] AP mode for initial setup
 - [ ] Web interface for setup
-- [ ] Implement [WebThings](http://www.espruino.com/) framework
+- [ ] Implement [WebThings](https://iot.mozilla.org/) framework
 - [ ] Compatibility with multiple device types (relays, light bulbs etc)
